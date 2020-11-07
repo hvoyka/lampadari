@@ -40,6 +40,11 @@
       background-repeat: no-repeat;
       margin-left: 10px;
     }
+    &:focus{outline-color: $text-color;}
+    &:active{outline-color: $text-color;}
+    &:hover{
+      text-decoration: underline;
+    }
   }
   &__nav {
     align-self: flex-end;
@@ -79,6 +84,55 @@
 // FOOTER
 .footer {
   padding: 30px 0 12px 0;
+  &__top{
+    max-width: 930px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+  }
+  &__item{
+    max-width: 210px;
+    width: 100%;
+    padding: 5px;
+    &-title{
+      font-family: $ff-second;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    &-text{
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &--form{
+      max-width: 194px;
+    }
+  }
+  &__form{
+    &-input{
+      width: 100%;
+      margin-bottom: 12px;
+      font-family: $ff-primary;
+      font-size: 14px;
+      line-height: 18px;
+      padding: 7px 6px;
+      border: none;
+    }
+    &-label{
+      width: 100%;
+      font-size: 10px;
+      line-height: 12px;
+      display: flex;
+    }
+    &-check{
+      margin-right: 8px;
+    }
+  }
   &__bottom {
     display: flex;
     justify-content: space-between;
