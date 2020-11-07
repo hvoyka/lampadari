@@ -3,72 +3,123 @@
 @import "_fonts";
 @import "_global";
 
-.main__wrapper{
+.main__wrapper {
   height: 100vh;
 }
 // HEADER
-.header__wrapper{
-  position: relative;
+
+.header {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 130px;
+    height: 100%;
+  }
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: $text-color;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 9px;
+      height: 13px;
+      background-image: url("../img/lock.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-left: 10px;
+    }
+  }
+  &__nav {
+    align-self: flex-end;
+  }
+}
+.nav-list {
+  @include reset-list;
+
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 130px;
-  height: 100%;
+  &__sub-section {
+    @include reset-list;
+
+    display: none;
+  }
+  li + li {
+    margin-left: 27px;
+  }
+  &__item {
+    position: relative;
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: 24px;
+    color: $text-color;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    margin-bottom: 12px;
+    &--active {
+      font-weight: bold;
+      color: $secondary-color;
+    }
+    &:hover{
+      color: $secondary-color;
+    }
+  }
 }
-.header__btn{
-  position: absolute;
-  top:0;
-  right: 0;
-  padding: 0;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: uppercase;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  color: $text-color;
+
+// FOOTER
+.footer {
+  padding: 30px 0 12px 0;
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__social {
+    &-link {
+      margin-right: 10px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
 }
-.header__btn::after{
-  content: "";
-  display: inline-block;
-  width: 9px;
-  height: 13px;
-  background-image: url("../img/lock.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 10px;
-}
-.header__nav{
-  align-self: flex-end;
-}
-.nav-list, .nav-list__sub-section{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.nav-list{
+
+.contacts-list {
+  @include reset-list;
+
   display: flex;
+  flex-wrap: wrap;
+  &__item {
+    margin-right: 15px;
+    font-size: 12px;
+    line-height: 24px;
+  }
 }
-.nav-list li + li {
-  margin-left: 27px;
-}
-.nav-list__item {
-  position: relative;
-  padding: 10px 0;
-  font-size: 18px;
-  line-height: 24px;
-  color:$text-color;
-  text-transform: uppercase;
-  transition: all 0.2s;
-  margin-bottom: 12px;
-}
-.nav-list__item--active{
-  font-weight: bold;
-  color: $secondary-color;
-}
-.nav-list__sub-section{
-  display: none;
+
+.lang-list {
+  @include reset-list;
+
+  display: flex;
+  &__item {
+    padding-left: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  li + li {
+    margin-left: 10px;
+    border-left: 1px solid $text-color;
+  }
 }
 // MEDIA
 @import "_media";
