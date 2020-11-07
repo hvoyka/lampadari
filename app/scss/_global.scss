@@ -15,6 +15,9 @@ body {
   color: $text-color;
   position: relative;
 }
+.no-scroll {
+  overflow: hidden;
+}
 a {
   display: inline-block;
   text-decoration: none;
@@ -64,6 +67,35 @@ img {
   border: 1px solid $secondary-color;
   background-color: $secondary-color;
   color: $text-color;
+}
+form {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    margin-bottom: 12px;
+    font-family: $ff-primary;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 6px 5px;
+    border: 2px solid transparent;
+    &:focus {
+      border: 2px solid $secondary-color;
+    }
+    &:active {
+      border: 2px solid $secondary-color;
+    }
+  }
+  input[type=checkbox] {
+    margin-right: 8px;
+    margin-bottom: 5px;
+  }
+  label{
+    width: 100%;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+  }
 }
 
 @mixin reset-list {

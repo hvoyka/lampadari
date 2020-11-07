@@ -20,7 +20,7 @@
           <a class="header__logo" href="/">
             <img src="./img/logo.png" alt="mmlampadari logo">
           </a>
-          <button class="header__btn">Area riservata</button>
+          <button id="open-modal-btn" class="header__btn">Area riservata</button>
           <nav class="header__nav">
             <ul class="header__nav-list nav-list">
               <li><a class="nav-list__item nav-list__item--active" href="#">HOME</a></li>
@@ -57,7 +57,7 @@
           <div class="main__slider-item">your content</div>
         </div>
       </div>
-     
+
     </main>
   </div>
 
@@ -68,19 +68,25 @@
         <div class="footer__item">
           <h3 class="footer__item-title">Lampadari made in italy</h3>
           <p class="footer__item-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea
           </p>
         </div>
         <div class="footer__item">
           <h3 class="footer__item-title">lampadari artigianali</h3>
           <p class="footer__item-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea
           </p>
         </div>
         <div class="footer__item">
           <h3 class="footer__item-title">45 anni di esperienza</h3>
           <p class="footer__item-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea
           </p>
         </div>
         <div class="footer__item footer__item--form">
@@ -90,8 +96,8 @@
             <input class="footer__form-input" type="email" placeholder="Email">
             <label class="footer__form-label">
               <input class="footer__form-check" type="checkbox">
-              Acconsento al trattamento dei dati              
-            </label>            
+              Acconsento al trattamento dei dati
+            </label>
             <button class="footer__form-btn btn">ISCRIVITI</button>
           </form>
         </div>
@@ -127,9 +133,41 @@
       </div>
     </div>
   </footer>
-
+  <section class="modal" id="modal" style="display: none;">
+    <div id="modal__bg" class="modal__bg"></div>
+    <div class="modal__wrapper">
+      <div class="modal__main-title">AREA RISERVATA</div>
+      <button id="modal__close-btn" class="modal__close-btn">X</button>
+      <div class="modal__box">
+        <form class="modal__form modal__form--login">
+          <div class="modal__title">ACCEDI</div>
+          <input class="modal__form-input" type="email" placeholder="Email">
+          <input class="modal__form-input" type="password" placeholder="Password">
+          <button class="modal__form-btn btn">ACCEDI</button>
+          <a class="modal__forget-link" href="#">Password dimenticata</a>
+        </form>
+        <form class="modal__form modal__form--reg">
+          <div class="modal__title">REGISTRATI</div>
+          <input class="modal__form-input" type="text" placeholder="Nome">
+          <input class="modal__form-input" type="text" placeholder="Cognome">
+          <input class="modal__form-input" type="email" placeholder="Email">
+          <input class="modal__form-input" type="password" placeholder="Password">
+          <label class="footer__form-label">
+            <input class="footer__form-check" type="checkbox">
+            Acconsento al trattamento dei dati
+          </label>
+          <label class="footer__form-label">
+            <input class="footer__form-check" type="checkbox">
+            Mi iscrivo alla Newsletter
+          </label>
+          <button class="modal__form-btn btn">ISCRIVITI</button>
+        </form>
+      </div>
+    </div>
+  </section>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 
 </html>
