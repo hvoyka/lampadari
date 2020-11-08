@@ -63,7 +63,9 @@ img {
   color: $text-color;
   transition: all 0.2s;
 }
-.btn:hover {
+.btn:hover,
+.btn:active,
+.btn:focus {
   border: 1px solid $secondary-color;
   background-color: $secondary-color;
   color: $text-color;

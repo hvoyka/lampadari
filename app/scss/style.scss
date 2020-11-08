@@ -81,6 +81,7 @@
     }
   }
 }
+
 //MAIN
 .main__wrapper {
   height: 100vh;
@@ -123,7 +124,7 @@
   @include reset-list;
 
   position: absolute;
-  bottom: 0;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -142,6 +143,7 @@
     margin: 5px;
   }
 }
+
 //APERTI
 .aperti{
   position: absolute;
@@ -150,11 +152,13 @@
   right: 0;  
   color:#000;
   &__wrapper{
+    display: none;
+    background-color: #fff;
+  }
+  &__items{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: #fff;
-    min-height: 170px;
   }
   &__item{
     max-width: 33%;
@@ -165,6 +169,7 @@
       margin: 0 0 10px 0;
       font-family: $ff-second;
       font-weight: bold;
+      min-height: 60px;
     }
     &-text{
       margin: 5px 0;
@@ -176,6 +181,9 @@
       color: #fff;
       font-size: 18px;
       line-height: 24px;
+      display: block;
+      margin-left: auto;
+      width: 110px;
       &:hover{
         text-decoration: underline;
       }
@@ -192,6 +200,25 @@
     &--black{
       background-color: #000;
       color: #fff;
+    }
+  }
+  &__btn{
+    display: block;
+    margin: 0 auto;
+    width: 88px;
+    height: 29px;
+    background-color: #fff;
+    background-image: url("../img/arrow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border: 2px solid transparent;
+    cursor: pointer;
+    &--open{
+      transform: rotate(180deg);
+    }
+    &:hover{
+      background-color: $secondary-color;
     }
   }
 }
@@ -272,6 +299,7 @@
   }
 }
 
+//MODAL
 .modal {
   &__bg {
     position: absolute;
@@ -349,5 +377,6 @@
     margin-bottom: 10px;
   }
 }
+
 // MEDIA
 @import "_media";

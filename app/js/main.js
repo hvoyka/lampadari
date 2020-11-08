@@ -6,7 +6,14 @@ $(function () {
     slidesToShow: 1,
     dots: true,
     arrows: false,
-    appendDots:$('.main__slider-dots'),
+    appendDots: $('.main__slider-dots'),
+  });
+
+  //APERTI
+
+  $("#aperti__btn").on('click', function () {
+    $("#aperti__wrapper").slideToggle();
+    $("#aperti__btn").toggleClass('aperti__btn--open');
   });
 
   //MODAL
