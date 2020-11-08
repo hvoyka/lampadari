@@ -12,13 +12,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 130px;
-    height: 100%;
-    &::after {
-      content: "";
-      min-height: inherit;
-      font-size: 0;
-    }
+    height: 130px; 
   }
   &__btn {
     position: absolute;
