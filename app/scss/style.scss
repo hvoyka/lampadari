@@ -3,10 +3,6 @@
 @import "_fonts";
 @import "_global";
 
-.main__wrapper {
-  height: 100vh;
-  overflow: hidden;
-}
 // HEADER
 
 .header {
@@ -86,6 +82,11 @@
   }
 }
 //MAIN
+.main__wrapper {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
 .main__slider {
   &-item {
     position: relative;
@@ -116,25 +117,81 @@
     line-height: 24px;
     margin: 10px 0;
   }
-  .slick-dots {
-    @include reset-list;
+  
+}
+.main__slider-dots .slick-dots {
+  @include reset-list;
 
-    position: absolute;
-    top: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  .slick-active button {
+    background-color: $secondary-color;
+  }
+  button {
+    border: 1px solid black;
+    background-color: #fff;
+    font-size: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    margin: 5px;
+  }
+}
+//APERTI
+.aperti{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;  
+  color:#000;
+  &__wrapper{
     display: flex;
-    .slick-active button {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fff;
+    min-height: 170px;
+  }
+  &__item{
+    max-width: 33%;
+    padding: 17px;
+    &-title{
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0 0 10px 0;
+      font-family: $ff-second;
+      font-weight: bold;
+    }
+    &-text{
+      margin: 5px 0;
+      font-size: 16px;
+      line-height: 25px;
+      margin-bottom: 10px;
+    }
+    &-link{
+      color: #fff;
+      font-size: 18px;
+      line-height: 24px;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    &--gold{
       background-color: $secondary-color;
     }
-    button {
-      border: 1px solid black;
+    &--white{
       background-color: #fff;
-      font-size: 0;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      padding: 0;
-      cursor: pointer;
-      margin: 5px;
+      .aperti__item-link{
+        color: #000;
+      }
+    }
+    &--black{
+      background-color: #000;
+      color: #fff;
     }
   }
 }

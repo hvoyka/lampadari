@@ -6,6 +6,7 @@ $(function () {
     slidesToShow: 1,
     dots: true,
     arrows: false,
+    appendDots:$('.main__slider-dots'),
   });
 
   //MODAL
