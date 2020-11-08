@@ -1,4 +1,8 @@
 $(function () {
+  //HEADER BURGER MENU
+  $("#header__burg").on('click', function () {
+    $("#nav-list").slideToggle();
+  });
   //MAIN SLIDER
   $('.main__slider').slick({
     infinite: true,

@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     min-height: 130px;
     height: 100%;
   }
@@ -49,6 +50,18 @@
   }
   &__nav {
     align-self: flex-end;
+  }
+  &__burg{
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    background-image: url("../img/burg.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
   }
 }
 .nav-list {
@@ -266,6 +279,7 @@
     max-width: 210px;
     width: 100%;
     padding: 5px;
+    margin: 0 5px;
     &-title {
       font-family: $ff-second;
       font-size: 14px;
@@ -286,8 +300,12 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__social {
+    display: flex;
+    justify-content: space-between;
+    min-width: 80px;
     &-link {
       margin-right: 10px;
 
@@ -303,6 +321,7 @@
 
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 5px;
   &__item {
     margin-right: 15px;
     font-size: 12px;
