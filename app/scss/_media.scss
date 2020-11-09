@@ -47,12 +47,16 @@
   .modal__wrapper {
     top: 5%;
   }
-  .header__nav{
+
+  .header__nav {
     margin-left: auto;
   }
 }
 @media (max-width: 576px) {
   .footer__top {
     justify-content: center;
+  }
+  .modal__form {
+    max-width: 100%;
   }
 }

@@ -16,7 +16,8 @@ body {
   position: relative;
 }
 .no-scroll {
-  overflow: hidden;
+  height: 100vh;
+  overflow-y: hidden;
 }
 .no-padding{ 
   padding: 0!important;
